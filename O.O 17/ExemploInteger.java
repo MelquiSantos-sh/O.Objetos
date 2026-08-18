@@ -1,73 +1,40 @@
-public class ExemploString {
-
-    public static void main(String args[]) {
-
-        String str1, str2, str3;
-
-        str1 = " um texto qualquer   .xxxxx.....     ";
-
-        System.out.println("[" + str1 + "]");
-
-        str1 = str1.trim();
-
-        System.out.println("apos o trim [" + str1 + "]");
-
-        System.out.println("tamanho do str1 = "
-                + str1.length());
-
-
-        // substituir substring dentro da String
-
-        str2 = str1.replace("texto", "teste");
-
-        System.out.println("str2[" + str2 + "]");
-
-        str2 = str2.replace(".", "$$");
-
-        System.out.println("str2[" + str2 + "]");
-
-
-        // Extrair uma substring
-
-        str2 = str1.substring(3, 8);
-
-        System.out.println("str2[" + str2 + "]");
-
-
-        // Procurar uma substring
-
-        str2 = "joao.silva@gmail.com";
-
-        int posicao = str2.indexOf('@');
-
-        System.out.println(str2
-                + " - o @ esta na posicao " + posicao);
-
-        System.out.println("Usuario : "
-                + str2.substring(0, str2.indexOf('@')));
-
-        System.out.println("Dominio : "
-                + str2.substring(str2.indexOf('@') + 1).toUpperCase());
-
-
-        // toUpperCase = transforma para maiúsculo
-        // toLowerCase = transforma para minúsculo
-
-
-        // Converter outros tipos para String
-
-        int valor = 5;
-
-        str3 = String.valueOf(valor);
-
-
-        // Quebra uma String em vetores
-
-        String valores = "4/6/2/55/22/9";
-
-        String[] arraysValores = valores.split("/");
-
-        System.out.println("arraysValores[3] = "
-                + arraysValores[3]);
+public class ExemploInteger{
+    public static void main(String args []) {
+        String s1 = "10";
+        System.out.println("s1 = "+ s1);
+        
+        // converter de string para int 
+        int i1 = Integer.parseInt(s1);
+        System.out.println("i1 = " + i1);
+        
+        
+        //converter de integer/int para string
+        
+        Integer i2 = 5;
+        s1 = i2.toString();
+        s1 = Integer.toString(i2);
+        int x = 2;
+        //s1 = x,toString(); // nqo funciona pois e int (tipo primitivo )
+        s1 = Integer.toString(x);
+        
+        //converter de integer para float
+        
+        float f1 = i2.floatValue() / 3;
+        System.out.println("f1 = " + f1);
+        System.out.println("f1 = "  
+         + String.format("%.02f ", f1));
+         
+         
+        
+        //float f2 = Integer.floatValue(x) / 5;
+        //System.out.println("f2 = " + f2);
+        
+        //comparacao
+        
+        Integer i3 = 3;
+        int i4 = 3;
+        System.out.println(i3 == i4);
+        System.out.println(i3.equals(i4));
+        
     }
 }
