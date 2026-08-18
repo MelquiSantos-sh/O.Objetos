@@ -69,5 +69,17 @@ public class ExemploString {
 
         System.out.println("arraysValores[3] = "
                 + arraysValores[3]);
+
+
+        // Percorra o arrayValores mostrando todos os valores na tela
+
+        System.out.println("Percorra arraysValores");
+
+        for (int i = 0; i < arraysValores.length; i++) {
+
+            System.out.println("arraysValores[" + i + "] = "
+                    + arraysValores[i]);
+        }
     }
+}
 }
